@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap');
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+	height: 100vh;
+	width: 100vw;
+    background-color: rgb(17 24 39);
+	overflow-x: hidden;
+}
+
+/* include border and padding in element width and height */
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #242424;
+	border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ffffff;
+	border-radius: 1px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bg-dots-lighter {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")
+}
+
+.bigdiv {
+	display: flex;
+}
+
+.transparent-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.316); /* Couleur de fond avec une légère opacité */
+    transition: background-color 0.3s ease; /* Transition en douceur de la couleur de fond */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Assurez-vous que l'en-tête est au-dessus de tout le contenu */
+}
+
+.header-image {
+    max-width: 125px; /* La largeur maximale de l'image est de 100% de la largeur de son conteneur */
+    height: auto; /* Gardez le rapport hauteur/largeur de l'image */
+    transition: max-width 0.3s ease; /* Transition en douceur de la taille de l'image */
+}
+
+.transparent-header.scrolled {
+    background-color: rgba(255, 255, 255, 0); /* Fond complètement transparent */
+    box-shadow: none; /* Supprimez toute ombre si vous en avez une */
+}
+
+.header-buttons {
+	align-self: center;
+	margin-right: 20px;
+}
+
+.header-buttons button {
+	margin-left: 5px;
+	width: 100px;
+	border-radius: 20px;
+	padding: 10px;
+	
+}
+
+.btn {
+	font-family: 'DM Sans', sans-serif;
+    position: relative;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    border: none;
+    outline: none;
+	background: none;
+    display: inline-block;
+}
+
+a {
+    display: inline-block;
+}
+
+.btn:hover {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0.105rem;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    background-color: #3DD980;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
+.btn.active {
+    position: relative;
+}
+
+.btn.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.105rem;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
