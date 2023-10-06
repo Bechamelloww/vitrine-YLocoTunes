@@ -10,7 +10,7 @@ body {
 body {
 	height: 100vh;
 	width: 100vw;
-    background-color: rgb(17 24 39);
+	background-color: rgb(17 24 39);
 	overflow-x: hidden;
 }
 
@@ -42,35 +42,44 @@ body {
 }
 
 .bg-dots-lighter {
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")
+	background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")
 }
 
 .bigdiv {
 	display: flex;
+	flex-direction: column;
 }
 
 .transparent-header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.316); /* Couleur de fond avec une légère opacité */
-    transition: background-color 0.3s ease; /* Transition en douceur de la couleur de fond */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Assurez-vous que l'en-tête est au-dessus de tout le contenu */
+	background-color: rgba(0, 0, 0, 0.316);
+	/* Couleur de fond avec une légère opacité */
+	transition: background-color 0.3s ease;
+	/* Transition en douceur de la couleur de fond */
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	/* Assurez-vous que l'en-tête est au-dessus de tout le contenu */
 }
 
 .header-image {
-    max-width: 125px; /* La largeur maximale de l'image est de 100% de la largeur de son conteneur */
-    height: auto; /* Gardez le rapport hauteur/largeur de l'image */
-    transition: max-width 0.3s ease; /* Transition en douceur de la taille de l'image */
+	max-width: 125px;
+	/* La largeur maximale de l'image est de 100% de la largeur de son conteneur */
+	height: auto;
+	/* Gardez le rapport hauteur/largeur de l'image */
+	transition: max-width 0.3s ease;
+	/* Transition en douceur de la taille de l'image */
 }
 
 .transparent-header.scrolled {
-    background-color: rgba(255, 255, 255, 0); /* Fond complètement transparent */
-    box-shadow: none; /* Supprimez toute ombre si vous en avez une */
+	background-color: rgba(255, 255, 255, 0);
+	/* Fond complètement transparent */
+	box-shadow: none;
+	/* Supprimez toute ombre si vous en avez une */
 }
 
 .header-buttons {
@@ -83,64 +92,92 @@ body {
 	width: 100px;
 	border-radius: 20px;
 	padding: 10px;
-	
+
 }
 
 .btn {
 	font-family: 'DM Sans', sans-serif;
-    position: relative;
-    color: rgb(241, 241, 241);
-    cursor: pointer;
-    border: none;
-    outline: none;
+	position: relative;
+	color: rgb(241, 241, 241);
+	cursor: pointer;
+	border: none;
+	outline: none;
 	background: none;
-    display: inline-block;
+	display: inline-block;
 }
 
 a {
-    display: inline-block;
+	display: inline-block;
 }
 
 .btn:hover {
-    color: whitesmoke;
-    text-decoration: none;
+	color: whitesmoke;
+	text-decoration: none;
 }
 
 .btn::before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 0.105rem;
-    left: 0;
-    bottom: 0;
-    visibility: hidden;
-    background-color: #3DD980;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 0.105rem;
+	left: 0;
+	bottom: 0;
+	visibility: hidden;
+	background-color: #3DD980;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
 }
 
 .btn:hover::before {
-    width: 100%;
-    visibility: visible;
+	width: 100%;
+	visibility: visible;
 }
 
 .btn.active {
-    position: relative;
+	position: relative;
 }
 
 .btn.active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 0.105rem;
-    left: 0;
-    bottom: 0;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 0.105rem;
+	left: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	margin-top: 170px;
+	flex-direction: column;
+}
+
+#presentation {
+	margin-left: 30%;
+	margin-right: 30%;
+	padding: 1rem;
+	background-image: linear-gradient(to bottom left, rgba(68, 67, 67, 0.5) 0%, transparent 100%);
+	border-radius: 15px;
+	box-shadow: 0 0.25rem 0.5rem rgba(128, 128, 128, 0.2);
+	box-shadow: none;
+}
+
+p {
+	color: rgb(180, 178, 178);
+	font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+	font-family: 'DM Sans', sans-serif;
+	color: white;
+	text-align: center;
 }
