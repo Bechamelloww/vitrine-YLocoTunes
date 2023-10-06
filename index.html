@@ -10,7 +10,7 @@
 
 <body class="bg-dots-lighter">
     <div class="bigdiv">
-        <div id="blurdiv" onclick="blurr()"></div>
+        <div id="blurdiv" onclick="hidediv()"></div>
         <header>
             <div class="transparent-header">
                 <img src="/ressources/img/logo.png" alt="" srcset="" class="header-image">
@@ -32,26 +32,55 @@
                 </button>
             </div>
             <div id="burgerdiv">
-                <button class="btn" onclick="location.href='#container'">Présentation</button>
-                <button class="btn" onclick="location.href='#teamH'">L'équipe</button>
-                <button class="btn" onclick="location.href='#mvpH'">MVP</button>
+                <button class="btn" onclick="hidediv()"><a href="#container">Présentation</a></button>
+                <button class="btn" onclick="hidediv()"><a href="#teamH">L'équipe</a></button>
+                <button class="btn" onclick="hidediv()"><a href="#mvpH">MVP</a></button>
             </div>
         </header>
         <div class="container" id="container">
             <h1>Présentation du projet</h1>
-            <div id="presentation">
+            <div class="presentation" id="presentation">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti optio amet vitae qui? Atque
-                    deserunt, ratione explicabo autem sapiente voluptates reprehenderit sed illo alias mollitia, tenetur
+                    deserunt, ratione explicabo autem sapiente voluptates reprehenderit sed illo alias mollitia,
+                    tenetur
                     quasi veritatis voluptas eveniet!</p>
             </div>
-            <h1 id="teamH">L'équipe</h1>
-            <div id="team"></div>
-            <h1 id="mvpH">Le MVP</h1>
-            <div id="mvp"></div>
+            <div id="teamH"></div>
+            <h1>L'équipe</h1>
+            <div class="presentation" id="team">
+                <div class="personne"><img src="/ressources/img/lucas.png" alt="">
+                    <h2>Lucas<br>REBOULET</h2>
+                    <h3>B2 Informatique</h3>
+                </div>
+                <div class="personne"><img src="/ressources/img/lucas.png" alt="">
+                    <h2>Jean-Philippe<br>CAETANO</h2>
+                    <h3>B3 Data & IA</h3>
+                </div>
+                <div class="personne"><img src="/ressources/img/lucas.png" alt="">
+                    <h2>Lukas<br>CRISTOFARO</h2>
+                    <h3>B2 Informatique</h3>
+                </div>
+                <div class="personne"><img src="/ressources/img/lucas.png" alt="">
+                    <h2>Benjamin<br>VERNET</h2>
+                    <h3>B3 Dev</h3>
+                </div>
+                <div class="personne"><img src="/ressources/img/lucas.png" alt="">
+                    <h2>Loan<br>FRANÇOIS</h2>
+                    <h3>B3 Dev</h3>
+                </div>
+                <div class="personne"><img src="/ressources/img/lucas.png" alt="">
+                    <h2>Gabriel<br>MARIE</h2>
+                    <h3>B2 Informatique</h3>
+                </div>
+            </div>
+            <div id="mvpH"></div>
+            <h1>Le MVP</h1>
+            <div class="presentation" id="mvp">
+
+            </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </div>
-
 </body>
 
 </html>

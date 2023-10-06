@@ -62,11 +62,13 @@ body {
 	z-index: 1000;
 }
 
+
+
 .header-image {
-	max-width: 125px;
+	max-width: auto;
 	padding: 5px;
-	height: auto;
-	transition: max-width 0.3s ease;
+	height: 125px;
+	transition: 0.3s ease;
 }
 
 .transparent-header.scrolled {
@@ -153,7 +155,7 @@ a {
 	flex-direction: column;
 }
 
-#presentation {
+.presentation {
 	margin-left: 20%;
 	margin-right: 20%;
 	padding: 1rem;
@@ -228,9 +230,9 @@ h1 {
 
 #burgerdiv {
 	width: 100%;
-	background-image: linear-gradient(to bottom left, rgba(68, 67, 67, 0.5) 0%, transparent 100%);
-	border-radius: 15px;
-	box-shadow: 0 0.25rem 0.5rem rgba(128, 128, 128, 0.2);
+	background-color: rgb(0, 0, 0, 0.316);
+	border-radius: 0px 0px 15px 15px;
+	align-items: center;
 	flex-direction: column;
 	position: fixed;
 	display: none;
@@ -238,14 +240,69 @@ h1 {
 	padding-top: 20px;
 	transition: 0.2s;
 	height: auto;
+	justify-content: center;
+	z-index: 1000;
 }
 
 #burgerdiv button {
-	margin-bottom: 10px;
+	font-size: large;
+	margin-bottom: 5px;
+	width: 200px;
+	border-radius: 20px;
+	padding: 10px;
 }
 
+#burgerdiv a {
+	text-decoration: none;
+	color: white;
+}
+
+#blurdiv {
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transition: 0.2s;
+	backdrop-filter: blur(5px);
+	z-index: 100;
+}
+
+#team {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background: none;
+	box-shadow: none;
+	justify-content: center;
+}
+
+.personne {
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	height: 300px;
+	width: 250px;
+	text-align: center;
+	color: rgb(180, 178, 178);
+	font-family: 'DM Sans', sans-serif;
+	background-image: linear-gradient(to bottom left, rgba(68, 67, 67, 0.5) 0%, transparent 100%);
+	border-radius: 15px;
+	box-shadow: 0 0.25rem 0.5rem rgba(128, 128, 128, 0.2);
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 40px;
+}
+
+#team img {
+	border-radius: 20px;
+	box-shadow: 0 0.25rem 0.5rem rgba(128, 128, 128, 0.2);
+	height: 50%;
+}
+
+
 @media screen and (max-width: 1000px) {
-	#presentation {
+	.presentation {
 		width: 100%;
 		border-radius: 0;
 		margin: 0;
