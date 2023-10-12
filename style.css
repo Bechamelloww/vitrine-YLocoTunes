@@ -269,8 +269,8 @@ h1 {
 
 #blurdiv {
 	display: none;
-	position: absolute;
-	height: 100%;
+	position: fixed;
+	height: 100vh;
 	width: 100%;
 	transition: 0.2s;
 	backdrop-filter: blur(5px);
