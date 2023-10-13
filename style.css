@@ -379,11 +379,21 @@ h1 {
 		margin-left: 0;
 	}
 
+	.presentation3 .diff {
+		padding: 0;
+	}
+
 	.header-buttons {
 		display: none;
 	}
 
 	.menu {
 		display: flex;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.presentation3 iframe {
+		width: 100%;
 	}
 }
