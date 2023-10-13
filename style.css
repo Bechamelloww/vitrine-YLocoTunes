@@ -160,6 +160,7 @@ a {
 	color: rgb(180, 178, 178);
 	margin-left: 20%;
 	margin-right: 20%;
+	margin-bottom: 20px;
 	padding: 2rem;
 	background-image: linear-gradient(to bottom left, rgba(68, 67, 67, 0.5) 0%, transparent 100%);
 	border-radius: 15px;
@@ -169,7 +170,20 @@ a {
 	flex-direction: column;
 }
 
-.presentation iframe {
+.presentation2 {
+	font-family: 'DM Sans', sans-serif;
+	color: rgb(180, 178, 178);
+	margin-left: 15%;
+	margin-right: 15%;
+	padding: 2rem;
+	background-image: linear-gradient(to bottom left, rgba(68, 67, 67, 0.5) 0%, transparent 100%);
+	border-radius: 15px;
+	box-shadow: 0 0.25rem 0.5rem rgba(128, 128, 128, 0.2);
+	display: flex;
+	justify-content: center;
+}
+
+.presentation2 iframe {
 	border-radius: 14px;
 }
 
@@ -188,13 +202,13 @@ h1 {
 	text-align: center;
 }
 
-h2 {
+.presentation h2 {
 	font-family: 'DM Sans', sans-serif;
 	color: white;
 	text-align: center;
 }
 
-li {
+.presentation li {
 	padding-top: 10px;
 }
 
@@ -328,7 +342,15 @@ li {
 	.presentation {
 		width: 100%;
 		border-radius: 0;
-		margin: 0;
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	.presentation2 {
+		width: 100%;
+		border-radius: 0;
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 	.header-buttons {
