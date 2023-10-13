@@ -156,6 +156,8 @@ a {
 }
 
 .presentation {
+	font-family: 'DM Sans', sans-serif;
+	color: rgb(180, 178, 178);
 	margin-left: 20%;
 	margin-right: 20%;
 	padding: 2rem;
@@ -164,6 +166,7 @@ a {
 	box-shadow: 0 0.25rem 0.5rem rgba(128, 128, 128, 0.2);
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .presentation iframe {
@@ -183,6 +186,10 @@ h1 {
 	font-family: 'DM Sans', sans-serif;
 	color: white;
 	text-align: center;
+}
+
+li {
+	padding-top: 10px;
 }
 
 .menu {
